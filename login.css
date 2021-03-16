@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+ :root {
+    --white: #ffffff;
+    --gray: #a59b9b;
+    --pink: #1da1f2;
+}
+
+.continer {
+    display: grid;
+    place-items: center;
+    margin-top: 70px;
+}
+
+.continer form {
+    width: 460px;
+    height: 375px;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.continer form .tittle {
+    text-transform: uppercase;
+    color: var(--pink);
+    font-size: 47px;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: 300px;
+    padding: 10px;
+}
+
+.style-input {
+    border: none;
+    border-bottom: 1px solid var(--pink);
+    display: block;
+    margin: 0px auto;
+    width: 70%;
+    margin-top: 35px;
+    font-size: 25px;
+    color: var(--pink);
+}
+
+.style-input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: rgb(167, 161, 161);
+    opacity: .5;
+    font-size: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.continer form .password {
+    margin-top: 20px;
+}
+
+.continer form .go {
+    border: 1px solid var(--gray);
+    padding: 20px;
+    width: 30%;
+    margin: 55px auto;
+    text-transform: uppercase;
+}
+
+.continer form .go:hover {
+    color: var(--pink);
+    border: 2px solid var(--pink);
+    font-weight: 300;
+    font-size: larger;
+}
+
+.warning {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    opacity: .5;
+}
