@@ -20,11 +20,12 @@ body {
 header {
     width: 317px;
     height: 100vh;
+    position: sticky;
     background-color: var(--white);
     font-weight: 700;
     font-size: 19px;
     border-left: 1px solid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: auto;
 }
 
 header .header-nav {
@@ -46,7 +47,8 @@ header .header-nav ul li a {
 }
 
 header .header-nav ul li a i {
-    font-size: 23px;
+    font-size: 19px;
+    line-height: 22.67px;
     color: var(--black);
 }
 
@@ -62,7 +64,7 @@ header .header-nav ul li a:hover {
     background-color: #e8f5fe;
     color: var(--primary);
     padding: 12px;
-    border-radius: 20px;
+    border-radius: 53px;
     transition: background-color .5s linear;
 }
 
@@ -103,4 +105,112 @@ header .header-nav .button {
     line-height: 1.3125;
     cursor: pointer;
     margin-top: 12px;
+}
+
+header .profile-name {
+    width: 235px;
+    height: 60px;
+    margin-top: 28px;
+    margin-left: 65px;
+    font-size: 15px;
+}
+
+header .profile-name i {
+    font-size: 25px;
+    border: 1px solid gray;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+header .profile-name span {
+    margin-left: 15px;
+}
+
+
+/* end header*/
+
+
+/* start main */
+
+main {
+    width: 600px;
+    height: 100vh;
+    border: 1px solid #ebebeb;
+    border-top: none;
+}
+
+main .header {
+    height: 53px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+main .newsfeed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .newsfeed .tweet-cont {
+    margin-top: 10px;
+    height: 153px;
+    border: 1px solid #ebebeb;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(236, 231, 231, 0), 0 6px 20px 0 rgba(202, 200, 200, 0.19);
+}
+
+main .newsfeed .tweet-cont .tweet {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    margin-top: 12px;
+}
+
+main .newsfeed .tweet-cont .tweet i {
+    font-size: 38px;
+    background-color: #b2bac0;
+    color: #5a6976;
+    padding: 8px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main .newsfeed .tweet-cont .tweet textarea {
+    min-height: 65px;
+    width: 464px;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    margin-left: 10px;
+    font-size: 19px;
+    color: #0f1419;
+}
+
+main .newsfeed .tweet-cont .tweet textarea:focus {
+    outline: none;
+}
+
+main .newsfeed .tweet-cont .submit-btn {
+    display: inline-block;
+    background-color: var(--primary);
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: capitalize;
+    align-items: center;
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 55px;
+    margin-left: 500px;
+    margin-top: 6px;
+}
+
+.styleFont {
+    font-size: 19px;
+    font-weight: 700;
+    margin-left: 10px;
+    text-transform: capitalize;
 }
