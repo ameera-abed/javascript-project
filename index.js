@@ -1,14 +1,35 @@
 let submitbtn = document.getElementById("submit-btn");
 let newsfeed = document.getElementById("newsfeed");
+let textarea = document.querySelector("textarea");
+let tweetCounter = 0;
 
-//tweet button when we click on it
-submitbtn.onclick = function() {
 
-        creatTweet();
+
+// check the textarea to enable tweet button
+textarea.onkeyup = function() {
+    if (textarea.value.length > 0) {
+        submitbtn.disabled = false;
+    } else {
+        submitbtn.disabled = true;
     }
-    // creat tweet function that creat tweet html element and add to page
-function creatTweet() {
-    let comment = document.createComment("creat new tweet");
+}
+
+//creat tweet when click on tweet btn
+submitbtn.onclick = function() {
+    tweetCounter++;
+    let tweetCounterClass = "tweet#" + tweetCounter;
+
+    creatTweet(tweetCounterClass);
+    tweetItslfText(tweetCounterClass);
+    tweetUser(tweetCounterClass);
+
+
+
+}
+
+// creat tweet function that creat tweet html element and add to page
+function creatTweet(tweetCounterClass) {
+
     let arrDiv = [];
     let addClassArr = ["newTweet", "tname", "tweetItSelf", "tweetBtn", "tBtn", "tBtn"]
     arrDiv.push(document.createElement("div"));
@@ -18,10 +39,10 @@ function creatTweet() {
         arrDiv.push(document.createElement("div"));
         if (i <= 3) {
             arrDiv[0].appendChild(arrDiv[i]);
-            arrDiv[i].classList.add(addClassArr[i]);
+            arrDiv[i].classList.add(addClassArr[i], tweetCounterClass);
         } else {
             arrDiv[3].appendChild(arrDiv[i]);
-            arrDiv[i].classList.add(addClassArr[i]);
+            arrDiv[i].classList.add(addClassArr[i], tweetCounterClass);
 
         }
     }
@@ -31,7 +52,7 @@ function creatTweet() {
 }
 
 function createBtn(arrDiv) {
-    console.log(arrDiv);
+
     let addClassArr1 = ["far", "fas", "fa-heart", "fa-retweet"]
     for (let i = 4; i <= 5; i++) {
         let s = document.createElement("i");
@@ -40,4 +61,22 @@ function createBtn(arrDiv) {
 
     }
 
+}
+//set  text of textarea to new tweet
+function tweetItslfText(tweetCounterClass) {
+    let tweetItself = document.getElementsByClassName(tweetCounterClass);
+    console.log(tweetCounterClass);
+    console.log(tweetItself);
+    tweetItself[1].textContent = textarea.value;
+}
+// get username from localstorge
+function userFromLocal() {
+    let user = localStorage.getItem("user");
+    return user;
+}
+// set the user in tweetitself container
+function tweetUser(tweetCounterClass) {
+    let tname = document.getElementsByClassName(tweetCounterClass);
+    console.log("tname");
+    tname[0].textContent = userFromLocal();
 }

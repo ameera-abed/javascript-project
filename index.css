@@ -208,6 +208,16 @@ main .newsfeed .tweet-cont .submit-btn {
     margin-left: 500px;
     margin-top: 6px;
     cursor: pointer;
+    border: none;
+}
+
+main .newsfeed .tweet-cont .submit-btn:disabled {
+    cursor: none;
+    background-color: #8ed0f9;
+}
+
+main .newsfeed .tweet-cont .submit-btn:focus {
+    outline: none;
 }
 
 .styleFont {
