@@ -10,6 +10,7 @@
     --gray: #a59b9b;
     --primary: #1da1f2;
     --black: #000000;
+    --border: 1px solid #ebebeb;
 }
 
 body {
@@ -213,4 +214,35 @@ main .newsfeed .tweet-cont .submit-btn {
     font-weight: 700;
     margin-left: 10px;
     text-transform: capitalize;
+}
+
+
+/* style newtweet*/
+
+main .newTweet {
+    width: 100%;
+    min-height: 150px;
+    background-color: var(--white);
+    border: var(--border);
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(236, 231, 231, 0), 0 6px 20px 0 rgba(202, 200, 200, 0.19);
+}
+
+main .newTweet .tweetItSelf {
+    min-height: 88px;
+    font-size: 19px;
+    margin-left: 10px;
+}
+
+main .newTweet .tweetBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: var(--border);
+    padding: 5px;
+}
+
+main .newTweet .tweetBtn .tBtn:hover {
+    color: var(--primary);
+    font-size: 18px;
 }
