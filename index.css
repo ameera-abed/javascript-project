@@ -260,7 +260,11 @@ main .newTweet .tweetBtn {
     padding: 5px;
 }
 
-main .newTweet .tweetBtn .tBtn:hover {
+main .newTweet .tweetBtn i {
+    color: #908b8b;
+}
+
+main .newTweet .tweetBtn .tBtn i:hover {
     color: var(--primary);
     font-size: 18px;
 }
