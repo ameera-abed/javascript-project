@@ -3,6 +3,7 @@ let newsfeed = document.getElementById("newsfeed");
 
 //tweet button when we click on it
 submitbtn.onclick = function() {
+
         creatTweet();
     }
     // creat tweet function that creat tweet html element and add to page
@@ -21,8 +22,22 @@ function creatTweet() {
         } else {
             arrDiv[3].appendChild(arrDiv[i]);
             arrDiv[i].classList.add(addClassArr[i]);
+
         }
     }
+    createBtn(arrDiv);
 
+
+}
+
+function createBtn(arrDiv) {
+    console.log(arrDiv);
+    let addClassArr1 = ["far", "fas", "fa-heart", "fa-retweet"]
+    for (let i = 4; i <= 5; i++) {
+        let s = document.createElement("i");
+        arrDiv[i].appendChild(s);
+        s.classList.add(addClassArr1[i - 4], addClassArr1[i - 2]);
+
+    }
 
 }
