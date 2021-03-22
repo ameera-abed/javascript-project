@@ -207,6 +207,7 @@ main .newsfeed .tweet-cont .submit-btn {
     border-radius: 55px;
     margin-left: 500px;
     margin-top: 6px;
+    cursor: pointer;
 }
 
 .styleFont {
@@ -226,6 +227,13 @@ main .newTweet {
     border: var(--border);
     margin-top: 10px;
     box-shadow: 0 4px 8px 0 rgba(236, 231, 231, 0), 0 6px 20px 0 rgba(202, 200, 200, 0.19);
+}
+
+main .newTweet .tname {
+    font-size: 19px;
+    font-weight: 700;
+    margin-left: 10px;
+    text-transform: capitalize;
 }
 
 main .newTweet .tweetItSelf {
