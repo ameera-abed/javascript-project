@@ -22,6 +22,7 @@ submitbtn.onclick = function() {
     creatTweet(tweetCounterClass);
     tweetItslfText(tweetCounterClass);
     tweetUser(tweetCounterClass);
+    clearText();
 
 
 
@@ -33,7 +34,7 @@ function creatTweet(tweetCounterClass) {
     let arrDiv = [];
     let addClassArr = ["newTweet", "tname", "tweetItSelf", "tweetBtn", "tBtn", "tBtn"]
     arrDiv.push(document.createElement("div"));
-    newsfeed.appendChild(arrDiv[0]);
+    newsfeed.insertBefore(arrDiv[0], newsfeed.firstElementChild);
     arrDiv[0].classList.add(addClassArr[0]);
     for (let i = 1; i <= 5; i++) {
         arrDiv.push(document.createElement("div"));
@@ -79,4 +80,8 @@ function tweetUser(tweetCounterClass) {
     let tname = document.getElementsByClassName(tweetCounterClass);
     console.log("tname");
     tname[0].textContent = userFromLocal();
+}
+//clear content of textarea after tweet
+function clearText() {
+    textarea.value = "";
 }
