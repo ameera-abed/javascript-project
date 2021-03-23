@@ -1,6 +1,7 @@
 let submitbtn = document.getElementById("submit-btn");
 let newsfeed = document.getElementById("newsfeed");
 let textarea = document.querySelector("textarea");
+let likebtn = document.getElementsByClassName("fa-heart");
 let tweetCounter = 0;
 
 
@@ -23,8 +24,7 @@ submitbtn.onclick = function() {
     tweetItslfText(tweetCounterClass);
     tweetUser(tweetCounterClass);
     clearText();
-
-
+    submitbtn.disabled = true;
 
 }
 
@@ -59,6 +59,9 @@ function createBtn(arrDiv) {
         let s = document.createElement("i");
         arrDiv[i].appendChild(s);
         s.classList.add(addClassArr1[i - 4], addClassArr1[i - 2]);
+        s.addEventListener('click', event => {
+            s.classList.toggle("likebtnclick");
+        })
 
     }
 
@@ -66,8 +69,6 @@ function createBtn(arrDiv) {
 //set  text of textarea to new tweet
 function tweetItslfText(tweetCounterClass) {
     let tweetItself = document.getElementsByClassName(tweetCounterClass);
-    console.log(tweetCounterClass);
-    console.log(tweetItself);
     tweetItself[1].textContent = textarea.value;
 }
 // get username from localstorge
@@ -85,3 +86,20 @@ function tweetUser(tweetCounterClass) {
 function clearText() {
     textarea.value = "";
 }
+//like btn 
+
+
+//likebtn[tweetCounter].addEventListener("click", function() {
+//  likebtn[0].classList.toggle("likebtnclick");
+//});
+//setInterval(clicklike(), 100);
+
+/*function clicklike() {
+    let r = document.querySelectorAll('.fa-heart');
+    console.log(r);
+    for (let j = 0; j < r.length; j++) {
+        r[j].addEventListener('click', event => {
+            r[j].classList.toggle("likebtnclick");
+        })
+    }
+}*/

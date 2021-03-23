@@ -20,8 +20,9 @@ body {
 
 header {
     width: 317px;
-    height: 100vh;
+    height: 625px;
     position: sticky;
+    top: 10px;
     background-color: var(--white);
     font-weight: 700;
     font-size: 19px;
@@ -250,6 +251,8 @@ main .newTweet .tweetItSelf {
     min-height: 88px;
     font-size: 19px;
     margin-left: 10px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
 }
 
 main .newTweet .tweetBtn {
@@ -267,6 +270,15 @@ main .newTweet .tweetBtn i {
 
 main .newTweet .tweetBtn .tBtn i:hover {
     color: var(--primary);
+    background-color: #9bf6ff;
+    border-radius: 50%;
+}
+
+
+/*  chnge like button when click */
+
+.likebtnclick {
+    color: rgba(163, 19, 19, 0.897) !important;
     background-color: #9bf6ff;
     border-radius: 50%;
 }
