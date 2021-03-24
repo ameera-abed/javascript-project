@@ -16,10 +16,11 @@ textarea.onkeyup = function() {
 }
 
 //creat tweet when click on tweet btn
-submitbtn.onclick = function() {
+submitbtn.addEventListener("click", creatEachElementtweet);
+
+function creatEachElementtweet() {
     tweetCounter++;
     let tweetCounterClass = "tweet#" + tweetCounter;
-
     creatTweet(tweetCounterClass);
     tweetItslfText(tweetCounterClass);
     tweetUser(tweetCounterClass);
@@ -61,6 +62,13 @@ function createBtn(arrDiv) {
         s.classList.add(addClassArr1[i - 4], addClassArr1[i - 2]);
         s.addEventListener('click', event => {
             s.classList.toggle("likebtnclick");
+            if (s.classList.contains("fa-retweet")) {
+                let tweetItselfclone = document.querySelector(".tweetItSelf").textContent;
+                console.log(tweetItselfclone);
+                creatEachElementtweet();
+                document.querySelector(".tweetItSelf").textContent = tweetItselfclone;
+
+            }
         })
 
     }

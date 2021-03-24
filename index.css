@@ -22,7 +22,8 @@ header {
     width: 317px;
     height: 625px;
     position: sticky;
-    top: 10px;
+    left: 0;
+    z-index: 100;
     background-color: var(--white);
     font-weight: 700;
     font-size: 19px;
