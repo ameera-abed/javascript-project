@@ -3,6 +3,7 @@ let newsfeed = document.getElementById("newsfeed");
 let textarea = document.querySelector("textarea");
 let likebtn = document.getElementsByClassName("fa-heart");
 let tweetCounter = 0;
+let tweets = [];
 
 
 
@@ -22,6 +23,7 @@ function creatEachElementtweet() {
     tweetCounter++;
     let tweetCounterClass = "tweet#" + tweetCounter;
     creatTweet(tweetCounterClass);
+    creatObject();
     tweetItslfText(tweetCounterClass);
     tweetUser(tweetCounterClass);
     clearText();
@@ -64,7 +66,6 @@ function createBtn(arrDiv) {
             s.classList.toggle("likebtnclick");
             if (s.classList.contains("fa-retweet")) {
                 let tweetItselfclone = document.querySelector(".tweetItSelf").textContent;
-                console.log(tweetItselfclone);
                 creatEachElementtweet();
                 document.querySelector(".tweetItSelf").textContent = tweetItselfclone;
 
@@ -87,27 +88,20 @@ function userFromLocal() {
 // set the user in tweetitself container
 function tweetUser(tweetCounterClass) {
     let tname = document.getElementsByClassName(tweetCounterClass);
-    console.log("tname");
+
     tname[0].textContent = userFromLocal();
 }
 //clear content of textarea after tweet
 function clearText() {
     textarea.value = "";
 }
-//like btn 
 
-
-//likebtn[tweetCounter].addEventListener("click", function() {
-//  likebtn[0].classList.toggle("likebtnclick");
-//});
-//setInterval(clicklike(), 100);
-
-/*function clicklike() {
-    let r = document.querySelectorAll('.fa-heart');
-    console.log(r);
-    for (let j = 0; j < r.length; j++) {
-        r[j].addEventListener('click', event => {
-            r[j].classList.toggle("likebtnclick");
-        })
+//creat object to store the tweet
+function creatObject() {
+    const tweetsObject = {
+        auther: localStorage.getItem("user"),
+        tweetsContent: textarea.value
     }
-}*/
+    tweets.push(tweetsObject);
+    console.log(tweets);
+}

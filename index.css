@@ -283,3 +283,7 @@ main .newTweet .tweetBtn .tBtn i:hover {
     background-color: #9bf6ff;
     border-radius: 50%;
 }
+
+.display-remove {
+    display: none;
+}
