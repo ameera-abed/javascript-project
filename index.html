@@ -5,85 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>twitter clone</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <title>login form</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <!--start header-->
-    <header>
-        <nav class="header-nav">
-            <ul>
-                <li class="logo">
-                    <a href="# "><i class="fab fa-twitter icon "></i></a>
-                </li>
-                <li>
-                    <a href="#" class="active"> <i class="fas fa-home icon "></i><span>home</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="fas fa-hashtag icon "></i><span>explore</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="far fa-bell icon "></i><span>notifaction</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="far fa-envelope icon "></i><span>message</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="far fa-bookmark icon "></i><span>bookmark</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="far fa-list-alt icon "></i><span>list</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="far fa-user icon "></i><span>profile</span></a>
-                </li>
-                <li>
-                    <a href="# "><i class="fas fa-ellipsis-h icon "></i><span>more</span></a>
-                </li>
-            </ul>
-            <div class="button">tweet</div>
-        </nav>
-        <div class="profile-name"><i class="fas fa-user-alt"></i><span class="username" id="username">ameera</span> </div>
-
-    </header>
-    <!--end header-->
-
-    <!--start main-->
-    <main>
-        <div class="header"><span class="styleFont">home</span></div>
-
-        <div class="tweet-form" id="tweet-form">
-            <form class="tweet-cont">
-                <div class="usernameTweet styleFont" id="usernameTweet">ameera</div>
-                <div class="tweet" id="tweet">
-                    <i class="fas fa-user-alt"></i>
-                    <textarea placeholder="Whats happening ?"></textarea>
-                </div>
-
-                <button class="submit-btn" id="submit-btn" type="button" disabled>tweet</button>
-            </form>
-        </div>
-
-        <!-- creat tweet -->
-        <div class="newsfeed" id="newsfeed">
-            <div class="newTweet">
-                <div class="tname">ameera</div>
-                <div class="tweetItSelf"></div>
-                <div class="tweetBtn">
-                    <div class="tBtn"><i class="far fa-heart"></i></div>
-                    <div class="tBtn"><i class="fas fa-retweet"></i></div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!--end main-->
-
-    <aside>
-
-    </aside>
-    <script src="index.js"></script>
+    <div class="continer">
+        <form id="form">
+            <div class="tittle text-center">login</div>
+            <input class="username style-input " id="usernaame-input" type="text" name="username" value="" placeholder="username" required>
+            <br>
+            <input class="password style-input " id="password" type="password" name="pssword" value="" placeholder="password" required>
+            <div class="go text-center" id="go">go</div>
+        </form>
+        <div class="emptyfieldWarning" id="emptyfieldWarning"></div>
+    </div>
+    <script src="login.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ goBtn.onclick = function() {
     if (username.value && password.value) {
         let userValue = username.value;
         localStorage.setItem("user", userValue);
-        location.href = "index.html";
+        location.href = "index1.html";
     } else {
 
         emptyfieldWarning.classList.add("warning");
