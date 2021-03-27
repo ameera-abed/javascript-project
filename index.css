@@ -22,8 +22,7 @@ header {
     width: 317px;
     height: 625px;
     position: sticky;
-    left: 0;
-    z-index: 100;
+    top: 0;
     background-color: var(--white);
     font-weight: 700;
     font-size: 19px;
@@ -282,8 +281,4 @@ main .newTweet .tweetBtn .tBtn i:hover {
     color: rgba(163, 19, 19, 0.897) !important;
     background-color: #9bf6ff;
     border-radius: 50%;
-}
-
-.display-remove {
-    display: none;
 }

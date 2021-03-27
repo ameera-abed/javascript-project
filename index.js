@@ -96,7 +96,7 @@ function clearText() {
     textarea.value = "";
 }
 
-//creat object to store the tweet
+//creat object to store the tweet and push it to array
 function creatObject() {
     const tweetsObject = {
         auther: localStorage.getItem("user"),
