@@ -2,6 +2,8 @@ let submitbtn = document.getElementById("submit-btn");
 let newsfeed = document.getElementById("newsfeed");
 let textarea = document.querySelector("textarea");
 let likebtn = document.getElementsByClassName("fa-heart");
+userFromlocalStorge(document.getElementById("usernameTweet"));
+userFromlocalStorge(document.getElementById("username"));
 let tweetCounter = 0;
 let tweets = [];
 
@@ -104,4 +106,8 @@ function creatObject() {
     }
     tweets.push(tweetsObject);
     console.log(tweets);
+}
+// get username from local storge 
+function userFromlocalStorge(s) {
+    s.textContent = localStorage.getItem("user");
 }

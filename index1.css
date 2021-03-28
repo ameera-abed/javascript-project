@@ -13,7 +13,7 @@
     --border: 1px solid #ebebeb;
 }
 
-body {
+.container {
     display: flex;
     flex-direction: row;
 }
